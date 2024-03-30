@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Achievements</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eef492;
+    background-image: radial-gradient(circle, #f91212, #e58e53);
+    color: #fff;
+    overflow-x: hidden;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(248, 146, 74, 0.993);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(13, 12, 12, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .achievement {
+    border-left: 2px solid #fff;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  .achievement:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.02);
+  }
+
+  .achievement h3 {
+    margin-top: 0;
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+
+  .achievement p {
+    margin: 0;
+    color: #110101;
+    opacity: 0.8;
+  }
+
+  .info-sheet {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    box-sizing: border-box;
+    transform-origin: top center;
+    transition: transform 0.5s ease;
+    overflow: hidden;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  .collapsed {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+
+  .expanded {
+    transform: scaleY(1);
+    opacity: 1;
+    z-index: 1;
+  }
+
+  @keyframes unfold {
+    0% {
+      transform: scaleY(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scaleY(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="achievement" onclick="toggleInfo(this)">
+    <h3>DANCE</h3>
+    <p>Date Achieved: January 5,2018</p>
+    <div class="info-sheet collapsed">
+      <p>secured 1st in school competition</p>
+    </div>
+  </div>
+  <div class="achievement" onclick="toggleInfo(this)">
+    <h3>ART</h3>
+    <p>Date Achieved: January 5, 2018</p>
+    <div class="info-sheet collapsed">
+      <p>secured 2nd in intra school competition</p>
+    </div>
+  </div>
+  <div class="achievement" onclick="toggleInfo(this)">
+    <h3>ATHLETICS</h3>
+    <p>Date Achieved: March 10, 2019</p>
+    <div class="info-sheet collapsed">
+      <p>secured 2nd in 200 mtrs running and 3rs in relay</p>
+    </div>
+  </div>
+       <div class="achievement" onclick="toggleInfo(this)">
+    <h3>SPORTS</h3>
+    <p>Date Achieved:August, 2021</p>
+    <div class="info-sheet collapsed">
+    <p>secured 2nd in throw ball,1st in shotput</p>
+      </div>
+      </div>
+    <div class="achievement" onclick="toggleInfo(this)">
+    <h3>CULTURALS</h3>
+    <p>Date Achieved:November, 2022</p>
+    <div class="info-sheet collapsed">
+    <p>Got 3rd prize for dance and secured many prize for events</p>
+    </div>
+    </div>
+    <div class="achievement" onclick="toggleInfo(this)">
+    <h3>TANTROTSAV</h3>
+    <p>Date Achieved:March, 2024</p>
+    <div class="info-sheet collapsed">
+    <p>Participated in non technical and technical events,secured 3rd prize under non technical event.</p>
+    </div>
+    </div>
+  </div>
+</div>
+<script>
+  function toggleInfo(achievement) {
+    const infoSheet = achievement.querySelector('.info-sheet');
+    infoSheet.classList.toggle('collapsed');
+    infoSheet.classList.toggle('expanded');
+  }
+</script>
+</body>
+</html>

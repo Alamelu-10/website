@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #2c3e50; /* Dark blue background color */
+    }
+    .content {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background for content */
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Box shadow for depth */
+    }
+    p {
+      margin-bottom: 20px;
+    }
+    .button {
+      background-color: #3498db; /* Button background color */
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease; /* Button transition effect */
+    }
+    .button:hover {
+      background-color: #2980b9; /* Button background color on hover */
+    }
+    /* Bubbling effect */
+    @keyframes bubbling {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+    .bubbling {
+      animation: bubbling 2s infinite;
+    }
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      margin-top: 20px;
+    }
+    .mySlides {
+      display: none;
+    }
+    img.slide-image {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    /* SVG animation */
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .svg-container {
+      display: inline-block;
+      margin-top: 20px;
+    }
+    .svg-icon {
+      width: 100px;
+      height: 100px;
+      fill: #3498db;
+      animation: rotate 2s linear infinite;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <h2>About Me</h2>
+      <p>A 19-year-old girl who is passionate about life and learning.I loves exploring new opportunities and embracing challenges.</p>
+      <p>Also believes in making a positive impact on the world and strives to inspire others through my actions.</p>
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img class="slide-image" src="" alt="Image 1">
+        </div>
+        <div class="mySlides fade">
+          <img class="slide-image" src="" alt="Image 2">
+        </div>
+        <div class="mySlides fade">
+          <img class="slide-image" src="" alt="Image 3">
+        </div>
+      </div>
+      <div class="svg-container">
+        <svg  class="svg-icon" viewBox="0 0 20 20">
+          <circle cx="10" cy="10" r="8" stroke="black" stroke-width="2" fill="transparent"/>
+        </svg>
+      </div>
+      <a href="#" class="button bubbling">Watch Video</a>
+    </div>
+  </div>
+  <script>
+    var slideIndex = 0;
+    showSlides();
+
+    
+  </script>
+</body>
+</html>

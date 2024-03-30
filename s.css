@@ -1,0 +1,12 @@
+/* Add this CSS to your existing styles */
+
+#scrolling-content {
+    overflow-y: auto;
+    height: 100vh;
+    animation: scroll 30s linear infinite; /* Adjust the duration as needed */
+}
+
+@keyframes scroll {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100%); }
+}

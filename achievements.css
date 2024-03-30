@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle, #f7df1e, #f06c8b); /* Bubbling background */
+    animation: bubble 10s infinite;
+  }
+  
+  @keyframes bubble {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 36px;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Magical text shadow */
+  }
+  
+  .achievement {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* White background with transparency */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out; /* Transition effect */
+    animation: square-fall 5s infinite;
+  }
+  
+  @keyframes square-fall {
+    0% {
+      transform: translateY(-200px) rotate(0deg);
+    }
+    100% {
+      transform: translateY(1000px) rotate(360deg);
+    }
+  }
+  
+  .achievement:hover {
+    transform: scale(1.05); /* Hover effect */
+  }
+  
+  h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  p {
+    font-size: 16px;
+    color: #666;
+  }
+  

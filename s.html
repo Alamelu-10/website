@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f7bef0; /* Vibrant background color */
+        }
+        header {
+            background-color:  rgba(231, 137, 176, 0.8);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: center;
+            color: #fff;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .bubble-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 150%;
+            height: 150%;
+            z-index: -1;
+            pointer-events: none;
+        }
+        .bubble {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: rgb(2, 28, 15);
+            border-radius: 50%;
+            animation: bubble-rise 0.001s infinite ease-in-out alternate;
+        }
+        @keyframes bubble-rise {
+            from { transform: translateY(100%); }
+            to { transform: translateY(-100%); }
+        }
+        .posh-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(219, 30, 153, 0.7);
+        }
+        .sidebar {
+            position: fixed;
+            left: -250px;
+            top: 0;
+            bottom: 0;
+            width: 250px;
+            background-color: rgba(231, 137, 176, 0.8);
+            transition: left 0.3s ease;
+            z-index: 999;
+            padding-top: 60px;
+        }
+        .sidebar.open {
+            left: 0;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        .sidebar ul li {
+            padding: 10px;
+        }
+        .sidebar ul li a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+        .sidebar-toggle {
+            position: fixed;
+            left: 20px;
+            top: 20px;
+            cursor: pointer;
+            z-index: 1000;
+            color: #fff;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Me</h1>
+    </header>
+    <div class="container">
+        <img src="butterfly.jpeg" alt="Profile Image" class="posh-img">
+        <p>
+            Hi there! I'm a 19-year-old college girl, passionate about life, learning, and exploring new horizons. College life is a beautiful journey filled with exciting experiences and endless possibilities. I believe in chasing dreams, embracing challenges, and making every moment count.
+        </p>
+        <p>
+            Whether it's studying late nights for exams, enjoying coffee with friends, or pursuing my interests, I strive to find joy in every little thing. I'm a firm believer in the power of positivity, kindness, and hard work. My journey is just beginning, and I'm excited to see where it takes me!
+        </p>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="personal.html">Personal</a></li>
+            <li><a href="abc.html">Interest</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+        </ul>
+    </div>
+
+    <!-- Sidebar Toggle Button -->
+    <div class="sidebar-toggle" id="sidebarToggle">&#9776;</div>
+
+    <!-- Bubbling Background -->
+    <div class="bubble-bg">
+        <!-- Generate bubbles dynamically -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const bubbleBg = document.querySelector(".bubble-bg");
+
+                // Function to generate bubbles
+                function createBubble() {
+                    const bubble = document.createElement("div");
+                    bubble.classList.add("bubble");
+                    bubble.style.left = Math.random() * 100 + "vw";
+                    bubble.style.animationDuration = Math.random() * 8 + 6 + "s";
+                    bubble.style.animationDelay = Math.random() * 1 + "s";
+                    bubbleBg.appendChild(bubble);
+
+                    // Remove bubble after animation completes
+                    bubble.addEventListener("animationend", function() {
+                        bubble.remove();
+                    });
+                }
+
+                // Generate bubbles at intervals
+                setInterval(createBubble, 1000);
+            });
+        </script>
+    </div>
+
+    <script>
+        // JavaScript for sidebar toggle
+        document.addEventListener("DOMContentLoaded", function() {
+            const sidebar = document.getElementById("sidebar");
+            const sidebarToggle = document.getElementById("sidebarToggle");
+
+            sidebarToggle.addEventListener("click", function() {
+                sidebar.classList.toggle("open");
+            });
+        });
+    </script>
+</body>
+</html>

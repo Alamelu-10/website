@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alamelu's Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden; /* Hide horizontal overflow */
+      background: linear-gradient(to bottom, #ebcd21, #f9e573); /* Gradient background */
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background: rgba(250, 174, 174, 0.8); /* Semi-transparent white background */
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+      position: relative;
+      z-index: 1;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+    }
+
+    .profile img {
+      width: 200px;
+      height: auto;
+      border-radius: 10px;
+      margin-right: 20px;
+      animation: imageScale 1s infinite alternate; /* Continuous scale animation */
+      box-shadow: lightpink;
+    }
+
+    @keyframes imageScale {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1.1);
+      }
+    }
+
+    .profile-details {
+      max-width: calc(100% - 200px); /* Maximum width for details */
+    }
+
+    .profile-details p {
+      margin: 10px 0;
+    }
+
+    .profile-details p strong {
+      font-weight: bold;
+    }
+
+    /* Heart shape animation */
+    .heart {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #ff4d6e; /* Heart color */
+      border-radius: 50%;
+      animation: heartBeat 1.5s infinite alternate;
+    }
+
+    @keyframes heartBeat {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1.5);
+      }
+    }
+
+    /* Additional styles for headings and links */
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Alamelu's Profile...</h1>
+    <div class="profile">
+      <img src="personal.jpeg" alt="Alamelu's Photo">
+      <div class="profile-details">
+        <p><strong>Name:</strong> Alamelu</p>
+        <p><strong>Age:</strong> 19</p>
+        <p><strong>Birthdate:</strong> July 10, 2005</p>
+        <p><strong>Hometown:</strong> Chennai</p>
+        <p><strong>Current Location:</strong> Chennai</p>
+        <p><strong>Education:</strong> B.Tech in Computer Science and Engineering at Amrita Vishwa Vidyapeetham</p>
+        <p><strong>Hobbies:</strong> Dance, listening to music, reading books</p>
+        <p><strong>Favorite Music Genre:</strong> Indie Folk, Melodies</p>
+        <p><strong>Favorite Food:</strong> South Indian, Chinese</p>
+        <p><strong>Role Model:</strong> APJ Abdul Kalam</p>
+        <p><strong>Dream Career:</strong> Software Engineer</p>
+        <p><strong>Volunteer Work:</strong> Tutoring underprivileged children in literacy</p>
+        <p><strong>Languages Spoken:</strong> Tamil, English</p>
+        <p><strong>Favorite Book:</strong> Ponniyin Selvan</p>
+        <p><strong>Travel Bucket List Destination:</strong> Wayanad, Georgia</p>
+        <p><strong>Fashion Style:</strong> Vintage-inspired with a modern twist</p>
+        <p><strong>Favorite Quote:</strong> "Be the change you wish to see in the world." - Mahatma Gandhi</p>
+        <p><strong>Life Goal:</strong> To empower others through storytelling and advocacy</p>
+        <!-- Add more personal details as needed -->
+      </div>
+    </div>
+    <!-- Heart shapes -->
+    <div class="heart" style="top: 20%; left: 10%;"></div>
+    <div class="heart" style="top: 50%; left: 70%;"></div>
+    <div class="heart" style="top: 80%; left: 30%;"></div>
+    <div class="heart" style="top: 20%; left: 10%;"></div>
+    <div class="heart" style="top: 50%; left: 70%;"></div>
+    <div class="heart" style="top: 80%; left: 30%;"></div>
+    <div class="heart" style="top: 20%; left: 10%;"></div>
+    <div class="heart" style="top: 50%; left: 70%;"></div>
+    <div class="heart" style="top: 80%; left: 30%;"></div>
+    <div class="heart" style="top: 20%; left: 10%;"></div>
+    <div class="heart" style="top: 50%; left: 70%;"></div>
+    <div class="heart" style="top: 80%; left: 30%;"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Progress</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #36D1DC, #5B86E5);
+            animation: gradientBackground 10s infinite alternate;
+        }
+        @keyframes gradientBackground {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .college-images {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .college-image {
+            width: 275px;
+            height: 150px;
+            margin: 0 10px;
+            box-sizing: border-box;
+           box-shadow: 0 0 30px color-mix(in lch increasing hue, pink 50%, lightgreen 40%);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .college-image:hover {
+            transform: scale(1.1);
+        }
+        .table-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+            transition: all 0.5s ease;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        td {
+            background-color: #fff;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .fadeIn {
+            animation: fadeIn 1s ease;
+        }
+        @keyframes percentageIncrease {
+            from {
+                width: 0;
+            }
+        }
+        .increase-animation {
+            animation: percentageIncrease 2s ease forwards;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Education Progress</h1>
+    <p>Details about school and college</p>
+    <div class="college-images">
+        <a href="http://www.vanividyalaya.edu.in/index.html"><img src="college1.jpeg" alt="College 1" class="college-image"></a>
+        <a href="https://grtschools.com/"><img src="college2.jpeg" alt="College 2" class="college-image"></a>
+        <a href="https://www.amrita.edu/about"><img src="college3.jpeg" alt="College 3" class="college-image"></a>
+    </div>
+</header>
+
+<div class="container">
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>10th Grade</th>
+                    <th>12th Grade</th>
+                    <th>College (ongoing)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="fadeIn">
+                    <td>Maths</td>
+                    <td>90%</td>
+                    <td>95%</td>
+                    <td class="increase-animation">85%</td>
+                </tr>
+                <tr class="fadeIn">
+                    <td>Physics</td>
+                    <td>85%</td>
+                    <td>90%</td>
+                    <td class="increase-animation">80%</td>
+                </tr>
+                <tr class="fadeIn">
+                    <td>Chemistry</td>
+                    <td>80%</td>
+                    <td>85%</td>
+                    <td class="increase-animation">75%</td>
+                </tr>
+                <tr class="fadeIn">
+                    <td>Tamil</td>
+                    <td>90%</td>
+                    <td>95%</td>
+                    <td class="increase-animation">85%</td>
+                </tr>
+                <tr class="fadeIn">
+                    <td>English</td>
+                    <td>85%</td>
+                    <td>90%</td>
+                    <td class="increase-animation">80%</td>
+                </tr>
+                <tr class="fadeIn">
+                    <td>Computer Science</td>
+                    <td>80%</td>
+                    <td>85%</td>
+                    <td class="increase-animation">75%</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    // JavaScript for increasing percentages
+    document.addEventListener('DOMContentLoaded', function() {
+        const collegeMarks = document.querySelectorAll('.increase-animation');
+        collegeMarks.forEach(mark => {
+            let currentPercentage = 0;
+            const targetPercentage = parseInt(mark.textContent);
+            const increment = targetPercentage / 100;
+
+            const interval = setInterval(() => {
+                if (currentPercentage >= targetPercentage) {
+                    clearInterval(interval);
+                } else {
+                    currentPercentage += increment;
+                    mark.textContent = Math.round(currentPercentage) + '%';
+                }
+            }, 20);
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    overflow: hidden; /* Ensure the background animations are contained within the container */
+  }
+  
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #001f3f, #87c6f0); /* Navy Blue background */
+    z-index: -1;
+    animation: animateBackground 10s linear infinite; /* Add background animation */
+  }
+  
+  @keyframes animateBackground {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .skill {
+    width: 200px;
+    padding: 20px;
+    margin: 20px;
+    background-color: #f9f9f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Add relative positioning for shimmer effect */
+  }
+  
+  .skill::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 20%, transparent 80%);
+    animation: shimmer 2s infinite;
+    border-radius: 20px;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .skill:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
+  }
+  
+  .skill h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .skill p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  /* Different border colors for each skill */
+  .html {
+    border: 2px solid #e34c26; /* HTML red */
+    box-shadow: 0 0 20px #e19785;
+  }
+  
+  .css {
+    border: 2px solid #2965f1; /* CSS blue */
+    box-shadow: 0 0 20px #abc3fa;
+  }
+  
+  .js {
+    border: 2px solid #f0db4f; /* JavaScript yellow */
+    box-shadow: 0 0 20px #f8eda2; 
+  }
+  
+  .react {
+    border: 2px solid #e036f7; /* React blue */
+    box-shadow: 0 0 20px  #e8aaf0;
+  }
+  
+  .python {
+    border: 2px solid #248923; /* Python green */
+    box-shadow: 0 0 20px  #acf3ab; 
+  }
+  
+  .photoshop {
+    border: 2px solid #e13596; /* Photoshop pink */
+    box-shadow: 0 0 20px #f5abd5; 
+  }
+  
+  /* Circles animation */
+  .circles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Circles won't interfere with mouse events */
+  }
+  
+  .circle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(251, 251, 246, 0.911); /* Semi-transparent white */
+    border-radius: 50%;
+    animation: float 3s infinite alternate; /* Make circles float */
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-20px);
+    }
+  }
+  

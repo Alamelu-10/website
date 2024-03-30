@@ -1,0 +1,40 @@
+body{
+    background:url(bb4.jpeg);
+    background-size: cover;
+}
+img{
+    width: 300px;
+    height: 250px;
+    border-radius: 3px;
+    border-color: #fff;
+}
+
+
+h1{
+    color: #fff;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+p{
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    text-decoration: wavy;
+
+}
+.image-link {
+    display: inline-block; /* Make the image a block element */
+    /* Additional styling if needed */
+    color: #fff;
+  }
+  img{
+
+    border-radius:0.5mm;
+    border-style: outset;
+    border-color: antiquewhite;
+    border-width: 2mm;
+    margin-right:7%; 
+  }
+  
